@@ -1,0 +1,20 @@
+.logoHeight{
+    height: 100px;
+}
+
+.logoHeaderGap{
+    margin-top: 40px !important;
+}
+
+
+.headerHeight{
+    height: 125px;
+}
+
+
+.leftLabelSpecs{
+    height: 122px;
+    margin-left: 0px !important;
+    width: 148px!important;
+    padding-top: 13px !important;
+}

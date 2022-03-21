@@ -1,0 +1,28 @@
+.topSpace{
+    padding-top: 80px;
+
+}
+
+.spaceBetweenButtons{
+    padding-top: 20px;
+
+}
+
+.buttonWidth{
+    max-width: 200px;
+    width: 178px;
+}
+
+
+.buttonSpace{
+    padding-top: 40px;
+}
+
+.topSpace{
+    padding-top: 80px;
+
+}
+
+.spaceFromTop{
+    margin-top: 345px !important;
+}

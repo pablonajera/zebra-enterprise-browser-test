@@ -1,0 +1,43 @@
+.defaultImageSize{
+    width: 300px;
+    height: 250px;
+
+}
+
+.spaceBetweenInputs{
+    margin-bottom: 30px;
+}
+
+.tinyMarginBottom{
+    margin-bottom: 0px;
+}
+
+.biggerMarginTop{
+    margin-top: 5px!important;
+}
+
+.topSpace{
+    padding-top: 60px;
+
+}
+
+.locationInputHeight{
+    height: 71.992px;
+}
+
+.leftLabelSpecs{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.rightLabelSpecs{
+
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.sides{
+    width:95% !important;
+}
