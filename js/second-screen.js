@@ -25,14 +25,14 @@ $secondScreen = (function(){
 ///CAMERA FUNCTIONALITY
 
 
-//enumerate the available cameras on the device
-var camArray = EB.Camera.enumerate();
+function picture_taken_callback(params) {
+  // Did we receive an image?
+  if (params["status"]=="ok") {
+    // show it in our <img id="captured_image"< tag
+    $("#image").attr("src", EB.Application.expandDatabaseBlobFilePath(params["imageUri"]));
+  }
 
- //below is the camera call back fired after takePicture is called
-var camera_callbackFunc = function(cbData){
-  //set the image uri to the image element
-  document.getElementById('image').src = cbData.imageUri ;
-};
+}
 
     function enableImageCapture() {
         // console.log('Camera opening...');
@@ -51,7 +51,17 @@ var camera_callbackFunc = function(cbData){
         //     }
         // });
 
-        camArray[0].takePicture({'outputFormat': 'dataUri'}, camera_callbackFunc);
+        EB.Camera.compressionFormat = "png";
+
+        // ...a particular image size...
+        EB.Camera.desiredWidth = 1024;
+        EB.Camera.desiredHeight = 768;
+
+        // ...and force the flash to be used
+        EB.Camera.flashMode = "on";
+
+        // Now, take the picture
+        EB.Camera.takePicture({}, picture_taken_callback);
     }
 
     return {
