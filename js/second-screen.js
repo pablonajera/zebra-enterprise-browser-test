@@ -35,33 +35,26 @@ function picture_taken_callback(params) {
 }
 
     function enableImageCapture() {
-        // console.log('Camera opening...');
-        // EB.Camera.takePicture({}, function(imageInfo) {
-        //     console.log('Camera closing...');
-        //     if (imageInfo) {
-        //         console.log('imageinfo is valid -> ');
-        //         console.log(imageInfo);
-        //         if (imageInfo["status"]=="ok") {
-        //             // Assuming we have an  tag, we will be able to see the image that was just captured
-        //             $(elementSelector.image).attr("src", imageInfo["imageUri"]);
-        //         }
-        //     }
-        //     else {
-        //         console.log('image info is not valid');
-        //     }
-        // });
-
-        EB.Camera.compressionFormat = "png";
-
-        // ...a particular image size...
-        EB.Camera.desiredWidth = 1024;
-        EB.Camera.desiredHeight = 768;
-
-        // ...and force the flash to be used
-        EB.Camera.flashMode = "on";
-
-        // Now, take the picture
-        EB.Camera.takePicture({}, picture_taken_callback);
+        console.log('Camera opening...');
+        EB.Camera.outputForma = "OUTPUT_FORMAT_IMAGE_PATH";
+        EB.Camera.takePicture({}, function(imageInfo) {
+            console.log('Camera closing...');
+            setTimeout(() => {
+                if (imageInfo) {
+                    console.log('imageinfo is valid -> ');
+                    console.log(imageInfo);
+                    console.log(imageInfo.status);
+                    console.log(imageInfo.imageUri);
+                    if (imageInfo["status"]=="ok" || imageInfo.status == 'ok') {
+                        // Assuming we have an  tag, we will be able to see the image that was just captured
+                        $(elementSelector.image).attr("src", imageInfo["imageUri"]);
+                    }
+                }
+                else {
+                    console.log('image info is not valid');
+                }
+            }, 4000);
+        });
     }
 
     return {
