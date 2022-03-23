@@ -25,11 +25,16 @@ $secondScreen = (function(){
 ///CAMERA FUNCTIONALITY
     function enableImageCapture() {
         console.log('Camera opening...');
-        EB.Camera.takePicture({
-            outputFormat: 'OUTPUT_FORMAT_IMAGE_PATH',
-        }, function(imageInfo) {
+        EB.Camera.takePicture({}, function(imageInfo) {
             console.log('Camera closing...');
-            $(elementSelector.image).attr('src', imageInfo.imageUri);
+            if (imageInfo) {
+                console.log('imageinfo is valid -> ');
+                console.log(imageInfo);
+                $(elementSelector.image).attr('src', imageInfo.imageUri);
+            }
+            else {
+                console.log('image info is not valid');
+            }
         });
     }
 
