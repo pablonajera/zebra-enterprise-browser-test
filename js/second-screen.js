@@ -7,13 +7,9 @@ $secondScreen = (function(){
 
 ///BARCODE FUNCTIONALITY
 
-    function expose(info) {
-        $('#log').append('</br>' + info);
-    }
-
     function enableScan() {
         if (EB && EB.Barcode && EB.Barcode.enable) {
-            expose('Succesfully loaded EB library');
+            console.log('Succesfully loaded EB library');
             EB.Barcode.enable({
                 allDecoders: true,
                 autoTab: true,
