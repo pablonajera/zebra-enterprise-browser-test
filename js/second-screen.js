@@ -7,9 +7,21 @@ $secondScreen = (function(){
 
 ///BARCODE FUNCTIONALITY
 
+    function checkForEnterpriseBrowserLibrary() {
+        axios.get('./ebapi-modules.js').then((response) => {
+            expose(response);
+        }).catch((error) => {
+            expose(error);
+        })
+    }
+
+    function expose(info) {
+        $('#log').append(info);
+    }
+
     function enableScan() {
         if (EB && EB.Barcode && EB.Barcode.enable) {
-            $('#title').text('Success!')
+            expose('Succesfully loaded EB library');
             EB.Barcode.enable({
                 allDecoders: true,
                 autoTab: true,
@@ -29,6 +41,7 @@ $secondScreen = (function(){
     return {
         initialize: function() {
             enableScan();
+            checkForEnterpriseBrowserLibrary();
         }
     }
 })();
