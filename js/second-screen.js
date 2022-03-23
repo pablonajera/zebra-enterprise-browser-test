@@ -38,9 +38,9 @@ $secondScreen = (function(){
     }
 
     return {
+        enableImageCapture: enableImageCapture,
         initialize: function() {
             enableScan();
-            enableImageCapture();
         }
     }
 })();
