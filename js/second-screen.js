@@ -23,8 +23,10 @@ $secondScreen = (function(){
 
 ///CAMERA FUNCTIONALITY
     function enableImageCapture() {
-        EB.Camera.takePicture({}, () => {
+        EB.Camera.takePicture({}, function(info) {
             console.log('TOOK A PICTURE');
+            $('#log').append('TOOK a PICTURE')
+            console.log(info);
         })
     }
 
