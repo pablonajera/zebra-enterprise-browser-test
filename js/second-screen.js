@@ -19,7 +19,7 @@ $secondScreen = (function(){
     }
 
 ///CAMERA FUNCTIONALITY
-    function initializeCameraSettings(){
+    //function initializeCameraSettings(){
         imager.imageCaptureEvent =
     }
 
