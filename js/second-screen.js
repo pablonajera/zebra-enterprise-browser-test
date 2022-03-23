@@ -1,12 +1,3 @@
-function expose(info) {
-    $('#log').append('</br>' + info);
-}
-
-console.log = expose;
-console.error = expose;
-console.warn = expose;
-
-
 $secondScreen = (function(){
 
     var elementSelector = {
