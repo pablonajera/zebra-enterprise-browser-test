@@ -4,6 +4,9 @@ $secondScreen = (function(){
         scanData: '#scan-data'
     }
 
+
+///BARCODE FUNCTIONALITY
+
     function enableScan() {
         EB.Barcode.enable({
             allDecoders: true,
@@ -11,10 +14,13 @@ $secondScreen = (function(){
             lowBatteryScan: true,
         });
     }
-
-
     function barcodeScanned(barcodeNumber) {
         $(elementSelector.scanData).text("barcode: " + barcodeNumber.data);
+    }
+
+///CAMERA FUNCTIONALITY
+    function initializeCameraSettings(){
+        imager.imageCaptureEvent =
     }
 
     return {
