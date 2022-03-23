@@ -1,3 +1,12 @@
+function expose(info) {
+    $('#log').append('</br>' + info);
+}
+
+console.log = expose;
+console.error = expose;
+console.warn = expose;
+
+
 $secondScreen = (function(){
 
     var elementSelector = {
@@ -7,13 +16,9 @@ $secondScreen = (function(){
 
 ///BARCODE FUNCTIONALITY
 
-    function expose(info) {
-        $('#log').append('</br>' + info);
-    }
-
     function enableScan() {
         if (EB && EB.Barcode && EB.Barcode.enable) {
-            expose('Succesfully loaded EB library');
+            console.log('Succesfully loaded EB library');
             EB.Barcode.enable({
                 allDecoders: true,
                 autoTab: true,
