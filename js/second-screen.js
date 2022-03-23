@@ -25,17 +25,13 @@ $secondScreen = (function(){
 ///CAMERA FUNCTIONALITY
 
 
+//enumerate the available cameras on the device
 var camArray = EB.Camera.enumerate();
 
-//below is the camera call back fired after takePicture is called
+ //below is the camera call back fired after takePicture is called
 var camera_callbackFunc = function(cbData){
-
-  //uri will have relative path info only
-  //user has to form the absolute local server path as shown below
-  uri = 'http://localhost:'+EB.System.localServerPort + cbData.imageUri;
   //set the image uri to the image element
-  document.getElementById('image').src = uri;
-
+  document.getElementById('image').src = cbData.imageUri ;
 };
 
     function enableImageCapture() {
@@ -55,7 +51,7 @@ var camera_callbackFunc = function(cbData){
         //     }
         // });
 
-        camArray[0].takePicture({'outputFormat': 'image'}, camera_callbackFunc);
+        camArray[0].takePicture({'outputFormat': 'dataUri'}, camera_callbackFunc);
     }
 
     return {
