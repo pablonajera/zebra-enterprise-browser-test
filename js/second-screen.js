@@ -7,16 +7,8 @@ $secondScreen = (function(){
 
 ///BARCODE FUNCTIONALITY
 
-    function checkForEnterpriseBrowserLibrary() {
-        axios.get('./ebapi-modules.js').then((response) => {
-            expose(response);
-        }).catch((error) => {
-            expose(error);
-        })
-    }
-
     function expose(info) {
-        $('#log').append(info);
+        $('#log').append('</br>' + info);
     }
 
     function enableScan() {
@@ -41,7 +33,6 @@ $secondScreen = (function(){
     return {
         initialize: function() {
             enableScan();
-            checkForEnterpriseBrowserLibrary();
         }
     }
 })();
