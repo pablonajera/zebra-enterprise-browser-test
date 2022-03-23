@@ -23,11 +23,13 @@ $secondScreen = (function(){
 
 ///CAMERA FUNCTIONALITY
     function enableImageCapture() {
+        console.log('Camera opening...');
         EB.Camera.takePicture({}, function(info) {
+            console.log('Camera closing...');
             console.log('TOOK A PICTURE');
             $('#log').append('TOOK a PICTURE')
             console.log(info);
-        })
+        });
     }
 
     return {
