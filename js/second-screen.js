@@ -25,12 +25,17 @@ $secondScreen = (function(){
 ///CAMERA FUNCTIONALITY
     function enableImageCapture() {
         console.log('Camera opening...');
-        EB.Camera.takePicture({}, function(imageInfo) {
+        EB.Camera.takePicture({
+            outputFormat: 'OUTPUT_FORMAT_IMAGE_PATH',
+        }, function(imageInfo) {
             console.log('Camera closing...');
             if (imageInfo) {
                 console.log('imageinfo is valid -> ');
                 console.log(imageInfo);
-                $(elementSelector.image).attr('src', imageInfo.imageUri);
+                if (imageInfo["status"]=="ok") {
+                    // Assuming we have an  tag, we will be able to see the image that was just captured
+                    $(elementSelector.image).attr("src", imageInfo["imageUri"]);
+                }
             }
             else {
                 console.log('image info is not valid');
