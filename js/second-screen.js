@@ -1,7 +1,8 @@
 $secondScreen = (function(){
 
     var elementSelector = {
-        scanData: '#scan-data'
+        scanData: '#scan-data',
+        image: '#image',
     }
 
 
@@ -23,12 +24,12 @@ $secondScreen = (function(){
 
 ///CAMERA FUNCTIONALITY
     function enableImageCapture() {
-        output('Camera opening...');
-        EB.Camera.takePicture({}, function(info) {
-            output('Camera closing...');
-            output('TOOK A PICTURE');
-            $('#log').append('TOOK a PICTURE')
-            console.log(info);
+        console.log('Camera opening...');
+        EB.Camera.takePicture({
+            outputFormat: 'OUTPUT_FORMAT_IMAGE_PATH',
+        }, function(imageInfo) {
+            console.log('Camera closing...');
+            $(elementSelector.image).attr('src', imageInfo.imageUri);
         });
     }
 
