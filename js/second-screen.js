@@ -22,17 +22,25 @@ $secondScreen = (function(){
     }
 
 ///CAMERA FUNCTIONALITY
-    function enableImageCapture(){
-    imager.top = 155;
-    imager.left = 25;
-    imager.width = 350;
-    imager.height = 240;
-    imager.enable();
+    function enableImageCapture() {
+        console.log(imager);
+        if (imager) {
+            console.log('imager exists!')
+        }
+        else {
+            console.log('imager does not exist');
+        }
+        imager.top = 155;
+        imager.left = 25;
+        imager.width = 350;
+        imager.height = 240;
+        imager.enable();
     }
 
     return {
         initialize: function() {
             enableScan();
+            enableImageCapture();
         }
     }
 })();
