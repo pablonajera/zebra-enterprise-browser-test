@@ -33,8 +33,8 @@ $secondScreen = (function(){
                 console.log(imageInfo);
                 if (imageInfo.status == 'ok') {
                     console.log(imageInfo.imageUri);
-                    // $(elementSelector.image).attr("src", 'http://localhost:' + EB.System.localServerPort + imageInfo.imageUri);
-                    $(elementSelector.image).attr("src", imageInfo.imageUri);
+                    $(elementSelector.image).attr("src", 'http://localhost:' + EB.System.localServerPort + imageInfo.imageUri);
+                    // $(elementSelector.image).attr("src", imageInfo.imageUri);
                 }
             }
         });
