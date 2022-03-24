@@ -27,7 +27,17 @@ $secondScreen = (function(){
 
     function enableImageCapture() {
         // EB.Camera.outputFormat = "OUTPUT_FORMAT_IMAGE_PATH";
-        EB.Camera.takePicture({});
+        EB.Camera.takePicture({}, function(imageInfo) {
+            if (imageInfo) {
+                if (imageInfo["status"]=="ok") {
+                    // Assuming we have an  tag, we will be able to see the image that was just captured
+                    $(elementSelector.image).attr("src", imageInfo["imageUri"]);
+                }
+                else if (imageInfo.status == 'ok') {
+                    $(elementSelector.image).attr("src", imageInfo.imageUri);
+                }
+            }
+        });
     }
 
     return {
