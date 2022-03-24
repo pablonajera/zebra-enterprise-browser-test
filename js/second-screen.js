@@ -43,6 +43,8 @@ function picture_taken_callback(cbData) {
 
 
 function takePicture(){
+    var enumData = "";
+    enumData = EB.Camera.enumerate();
     var param = {
         'outputFormat':'image',
     };
