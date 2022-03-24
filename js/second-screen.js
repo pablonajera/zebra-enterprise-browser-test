@@ -26,14 +26,16 @@ $secondScreen = (function(){
 
 
     function enableImageCapture() {
-        // EB.Camera.outputFormat = "OUTPUT_FORMAT_IMAGE_PATH";
-        EB.Camera.takePicture({}, function(imageInfo) {
+        console.log('Opening camera!');
+        EB.Camera.takePicture({
+            outputFormat: 'OUTPUT_FORMAT_IMAGE_PATH',
+        }, function(imageInfo) {
+            console.log('IMAGE TAKEN');
             if (imageInfo) {
-                if (imageInfo["status"]=="ok") {
-                    // Assuming we have an  tag, we will be able to see the image that was just captured
-                    $(elementSelector.image).attr("src", imageInfo["imageUri"]);
-                }
-                else if (imageInfo.status == 'ok') {
+                console.log(imageInfo);
+                if (imageInfo.status == 'ok') {
+                    console.log(imageInfo.imageUri);
+                    // $(elementSelector.image).attr("src", 'http://localhost:' + EB.System.localServerPort + imageInfo.imageUri);
                     $(elementSelector.image).attr("src", imageInfo.imageUri);
                 }
             }
