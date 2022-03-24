@@ -27,9 +27,7 @@ $secondScreen = (function(){
 
     function enableImageCapture() {
         console.log('Opening camera!');
-        EB.Camera.takePicture({
-            outputFormat: 'OUTPUT_FORMAT_IMAGE_PATH',
-        }, function(imageInfo) {
+        EB.Camera.takePicture({}, function(imageInfo) {
             console.log('IMAGE TAKEN');
             if (imageInfo) {
                 console.log(imageInfo);
