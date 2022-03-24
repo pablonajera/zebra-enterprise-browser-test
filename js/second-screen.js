@@ -54,7 +54,7 @@ function takePicture(){
 
 
         console.log('Camera opening...');
-        EB.Camera.outputFormat = "OUTPUT_FORMAT_IMAGE_PATH";
+        // EB.Camera.outputFormat = "OUTPUT_FORMAT_IMAGE_PATH";
         EB.Camera.takePicture({}, function(imageInfo) {
             console.log('Camera closing...');
             setTimeout(() => {
