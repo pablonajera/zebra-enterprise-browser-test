@@ -2,7 +2,7 @@ $secondScreen = (function(){
 
     var elementSelector = {
         scanData: '#scan-data',
-        image: '#image',
+        images: '#images',
     }
 
 
@@ -33,8 +33,10 @@ $secondScreen = (function(){
                 console.log(imageInfo);
                 if (imageInfo.status == 'ok') {
                     console.log(imageInfo.imageUri);
-                    $(elementSelector.image).attr("src", 'http://localhost:' + EB.System.localServerPort + imageInfo.imageUri);
-                    // $(elementSelector.image).attr("src", imageInfo.imageUri);
+                    $(elementSelector.images).show();
+                    const imageLocation = 'http://localhost:' + EB.System.localServerPort + imageInfo.imageUri;
+                    const newImage = '<img class="ui medium image" src="' + imageLocation + '">';
+                    $(elementSelector.images).append(newImage);
                 }
             }
         });
