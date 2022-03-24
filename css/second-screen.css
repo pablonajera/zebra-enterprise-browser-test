@@ -41,3 +41,8 @@
 .sides{
     width:95% !important;
 }
+
+#images img {
+    display: inline-block;
+    margin: 10px;
+}
