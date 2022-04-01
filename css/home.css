@@ -1,0 +1,14 @@
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0px;
+    padding-left: 60px;
+    padding-right: 60px;
+    line-height: 60px;
+}
+
+#container > div {
+    width: 100%;
+}
