@@ -1,0 +1,36 @@
+.horizontal.divider {
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+.item.row {
+    border: 1px solid #e6e6e6;
+}
+
+.item.row:hover,
+.item.row:active {
+    border: 3px solid #2285d0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.item.row:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+.item.row > .quantity.column > .subtitle {
+    margin-bottom: -14px;
+}
+
+.item.row > .quantity.column > .header {
+    margin: 0px;
+}
+
+.item.row img {
+    max-height: 135px;
+    display: inline-block;
+}
+
+.item.row > .info.column > .header{
+    margin: 0px 0px -3px 0px;
+}

@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.31/vue.global.min.js" integrity="sha512-C/bodwN49fOc1z+jln+2l9FlJ+lZ8HifB30oLE87zMQwsfoWv6Ed25b/x646tlcKb7515VJrJK8uo1oIH1UR2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="ui_framework/semantic/semantic.css?v=2.2.2" rel="stylesheet" type="text/css">
     <script src="ui_framework/semantic/semantic.min.js?v=2.2.2" type="text/javascript"></script>
-    <link rel="stylesheet" href="css/common-styles.css?v=4">
+    <link rel="stylesheet" href="css/common-styles.css?v=5">
     <link rel="stylesheet" href="css/item-selection.css?v=1">
     <link rel="stylesheet" href="js/item-selection.js?v=1">
 </head>
@@ -21,27 +21,38 @@
         <div class="ui small fluid input">
             <input type="text" placeholder="PO Number">
         </div>
-        <div class="ui grid" style="margin-top: 75px;">
-            <div class="row">
-                <div class="center aligned seven wide column">
-                    <img class="ui image" src="images/products/hardhat.jpeg" style="max-height: 250px; display: inline-block;">
+        <div class="ui fluid basic unpadded segment">
+            <div class="ui tiny gray horizontal divider">
+                Items in PO
+            </div>
+            <div class="ui results grid">
+                <div class="item row">
+                    <div class="center aligned two wide middle aligned quantity column">
+                        <p class="tiny subtitle">QTY</p>
+                        <div class="ui large center aligned header">12</div>
+                    </div>
+                    <div class="five wide center aligned middle aligned column">
+                        <img class="ui image" src="images/products/hardhat.jpeg" style="">
+                    </div>
+                    <div class="nine wide info column">
+                        <div class="ui medium header">98722663</div>
+                        <p class="small subtitle">ANSI Type I Class E 4-Point Ratchet Hard Hat</p>
+                    </div>
                 </div>
-                <div class="nine wide column" style="padding-top: 14px;">
-                    <div class="ui medium header">98722663</div>
-                    <p class="small subtitle">ANSI Type I Class E 4-Point Ratchet Hard Hat</p>
+                <div class="item row">
+                    <div class="center aligned two wide middle aligned quantity column">
+                        <p class="tiny subtitle">QTY</p>
+                        <div class="ui large center aligned header">12</div>
+                    </div>
+                    <div class="five wide center aligned middle aligned column">
+                        <img class="ui image" src="images/products/hardhat.jpeg" style="">
+                    </div>
+                    <div class="nine wide info column">
+                        <div class="ui medium header">98722663</div>
+                        <p class="small subtitle">ANSI Type I Class E 4-Point Ratchet Hard Hat</p>
+                    </div>
                 </div>
             </div>
-            <div class="ui divider"></div>
-            <div class="row">
-                <div class="center aligned seven wide column">
-                    <img class="ui image" src="images/products/hardhat.jpeg" style="max-height: 250px; display: inline-block;">
-                </div>
-                <div class="nine wide column" style="padding-top: 14px;">
-                    <div class="ui medium header">98722663</div>
-                    <p class="small subtitle">ANSI Type I Class E 4-Point Ratchet Hard Hat</p>
-                </div>
-            </div>
-            <div class="ui divider"></div>
         </div>
     </div>
 </body>

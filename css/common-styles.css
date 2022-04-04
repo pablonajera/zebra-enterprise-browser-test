@@ -1,5 +1,14 @@
+p.tiny,
+.tiny.header,
+.tiny.divider,
+.tiny.button,
+.tiny.input {
+    font-size: 22px !important;
+}
+
 p.small,
 .small.header,
+.small.divider,
 .small.button,
 .small.input {
     font-size: 30px !important;
@@ -7,6 +16,7 @@ p.small,
 
 p.medium,
 .medium.header,
+.medium.divider,
 .medium.button,
 .medium.input {
     font-size: 48px !important;
@@ -14,6 +24,7 @@ p.medium,
 
 p.large,
 .large.header,
+.large.divider,
 .large.button,
 .large.input {
     font-size: 65px !important;
@@ -21,4 +32,8 @@ p.large,
 
 p.subtitle {
     color: grey;
+}
+
+div.unpadded.segment {
+    padding: 0px;
 }
