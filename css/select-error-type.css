@@ -10,6 +10,6 @@
     left: -0.5rem;
 }
 
-ui.toggle.checkbox > label.checked::after {
-    left: 30.15rem;
+.ui.toggle.checkbox.checked > label::after {
+    left: 4.15rem !important;
 }
