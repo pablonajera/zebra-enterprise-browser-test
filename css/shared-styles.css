@@ -2,3 +2,11 @@
 .fullScreen{
     width: auto!important;
 }
+
+.large.font{
+    font-size: 48px!important;
+}
+
+.medium.font{
+    font-size: 36px!important;
+}
