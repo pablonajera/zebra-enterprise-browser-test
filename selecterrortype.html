@@ -10,6 +10,8 @@
     <script type="text/javascript" src= "js/select-error-type.js"></script>
     <link href="ui_framework/semantic/semantic.css?v=2.2.2" rel="stylesheet" type="text/css">
     <script src="ui_framework/semantic/semantic.min.js?v=2.2.2" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8" src="js/EnterpriseBrowser/ebapi-modules.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/EnterpriseBrowser/BackwardCompatibility/elements.js"></script>
     <link rel="stylesheet" href="css/common-styles.css?v=5">
     <link rel="stylesheet" href="css/select-error-type.css?v=4">
     <link rel="stylesheet" href="css/shared-styles.css?v=6">
@@ -64,6 +66,16 @@
                             <div class="field">
                                 <label class="medium font" style="padding-bottom:18px; padding-top:18px;">Enter Info</label>
                                 <input class="medium font"type="text" name="last-name" placeholder="Type...">
+                            </div>
+                        </div>
+                        <div class="ui fluid center aligned basic segment">
+                            <div class="ui center aligned container">
+                                <button class="ui massive labeled medium font blue icon button" onclick="$selectErrorType.enableImageCapture()">
+                                    <i class="camera icon"></i>
+                                    Capture Photo
+                                </button>
+                            </div>
+                            <div id="images" style="display: none;" class="ui raised segment">
                             </div>
                         </div>
                     </div>
