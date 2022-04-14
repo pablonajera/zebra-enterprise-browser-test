@@ -11,7 +11,8 @@
     <link href="ui_framework/semantic/semantic.css?v=2.2.2" rel="stylesheet" type="text/css">
     <script src="ui_framework/semantic/semantic.min.js?v=2.2.2" type="text/javascript"></script>
     <link rel="stylesheet" href="css/common-styles.css?v=5">
-    <link rel="stylesheet" href="css/select-error-type.css?v=2">
+    <link rel="stylesheet" href="css/select-error-type.css?v=4">
+    <link rel="stylesheet" href="css/shared-styles.css?v=6">
 
 </head>
 <body>
@@ -36,19 +37,174 @@
     <div class="ui basic segment">
         <div class="ui form">
             <div class="ui basic segment" style="display: flex;justify-content: center;">
-                <div class="inline field">
-                    <label style="font-size: 48px;">Items with Errors</label>
-                    <input style="font-size: 48px; width: 200px;" type="text"/>
+                <div class="inline field" >
+                    <label style="font-size: 36px;margin-right: 422.857;">Items with Errors</label>
+                    <input style="font-size: 36px; width: 200px;height: 76px;" type="text"/>
                 </div>
             </div>
+            <div class="ui divider"></div>
             <div class="ui basic segment">
-                <div class="inline field">
-                    <div class="ui toggle checkbox">
-                        <input type="checkbox" tabindex="0" class="hidden">
-                        <label>Barcode Error</label>
+                <div class="ui two column relaxed grid">
+                    <div class="row bottom space">
+                        <div class="ten wide column" style="padding-top: 31px;">
+                            <label class="title text">Error 1</label>
+                        </div>
+                        <div class="six wide column">
+                            <div class="ui toggle 1 checkbox left padding" >
+                                <input type="checkbox" tabindex="0" class="hidden">
+                            </div>
+                        </div>
                     </div>
+                    <div class="hidden row bottom space" id="error-form-1" >
+                        <div class="ui basic segment" style="padding-left:19px; padding-right: 21px;">
+                            <div class="field">
+                                <label class="medium font" style="padding-bottom:18px;">Enter Info</label>
+                                <input class="medium font" type="text" name="first-name" placeholder="Type...">
+                            </div>
+                            <div class="field">
+                                <label class="medium font" style="padding-bottom:18px; padding-top:18px;">Enter Info</label>
+                                <input class="medium font"type="text" name="last-name" placeholder="Type...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottom space">
+                        <div class="ten wide column" style="padding-top: 31px;">
+                            <label style="font-size: 36px; font-weight:bold;">Error 2</label>
+                        </div>
+                        <div class="six wide column">
+                            <div class="ui toggle 2 checkbox left padding">
+                                <input type="checkbox" tabindex="0" class="hidden">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden row bottom space" id="error-form-2" >
+                        <div class="ui basic segment" style="padding-left:19px; padding-right: 21px;">
+                            <div class="field">
+                                <label class="medium font" style="padding-bottom:18px;">Enter Info</label>
+                                <input class="medium font" type="text" name="first-name" placeholder="Type...">
+                            </div>
+                            <div class="field">
+                                <label class="medium font" style="padding-bottom:18px; padding-top:18px;">Enter Info</label>
+                                <input class="medium font"type="text" name="last-name" placeholder="Type...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottom space">
+                        <div class="ten wide column" style="padding-top: 31px;">
+                            <label style="font-size: 36px; font-weight:bold;">Error 3</label>
+                        </div>
+                        <div class="six wide column">
+                            <div class="ui toggle 3 checkbox left padding">
+                                <input type="checkbox" tabindex="0" class="hidden">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden row bottom space" id="error-form-3" >
+                        <div class="ui basic segment" style="padding-left:19px; padding-right: 21px;">
+                            <div class="field">
+                                <label class="medium font" style="padding-bottom:18px;">Enter Info</label>
+                                <input class="medium font" type="text" name="first-name" placeholder="Type...">
+                            </div>
+                            <div class="field">
+                                <label class="medium font" style="padding-bottom:18px; padding-top:18px;">Enter Info</label>
+                                <input class="medium font"type="text" name="last-name" placeholder="Type...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottom space">
+                        <div class="ten wide column" style="padding-top: 31px;">
+                            <label style="font-size: 36px; font-weight:bold;">Error 4</label>
+                        </div>
+                        <div class="six wide column">
+                            <div class="ui toggle 4 checkbox left padding">
+                                <input type="checkbox" tabindex="0" class="hidden">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden row bottom space" id="error-form-4" >
+                        <div class="ui basic segment" style="padding-left:19px; padding-right: 21px;">
+                            <div class="field">
+                                <label class="medium font" style="padding-bottom:18px;">Enter Info</label>
+                                <input class="medium font" type="text" name="first-name" placeholder="Type...">
+                            </div>
+                            <div class="field">
+                                <label class="medium font" style="padding-bottom:18px; padding-top:18px;">Enter Info</label>
+                                <input class="medium font"type="text" name="last-name" placeholder="Type...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottom space">
+                        <div class="ten wide column" style="padding-top: 31px;">
+                            <label style="font-size: 36px; font-weight:bold;">Error 5</label>
+                        </div>
+                        <div class="six wide column">
+                            <div class="ui toggle 5 checkbox left padding">
+                                <input type="checkbox" tabindex="0" class="hidden">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden row bottom space" id="error-form-5" >
+                        <div class="ui basic segment" style="padding-left:19px; padding-right: 21px;">
+                            <div class="field">
+                                <label class="medium font" style="padding-bottom:18px;">Enter Info</label>
+                                <input class="medium font" type="text" name="first-name" placeholder="Type...">
+                            </div>
+                            <div class="field">
+                                <label class="medium font" style="padding-bottom:18px; padding-top:18px;">Enter Info</label>
+                                <input class="medium font"type="text" name="last-name" placeholder="Type...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottom space">
+                        <div class="ten wide column" style="padding-top: 31px;">
+                            <label style="font-size: 36px; font-weight:bold;">Error 6</label>
+                        </div>
+                        <div class="six wide column">
+                            <div class="ui toggle 6 checkbox left padding">
+                                <input type="checkbox" tabindex="0" class="hidden">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden row bottom space" id="error-form-6" >
+                        <div class="ui basic segment" style="padding-left:19px; padding-right: 21px;">
+                            <div class="field">
+                                <label class="medium font" style="padding-bottom:18px;">Enter Info</label>
+                                <input class="medium font" type="text" name="first-name" placeholder="Type...">
+                            </div>
+                            <div class="field">
+                                <label class="medium font" style="padding-bottom:18px; padding-top:18px;">Enter Info</label>
+                                <input class="medium font"type="text" name="last-name" placeholder="Type...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottom space">
+                        <div class="ten wide column" style="padding-top: 31px;">
+                            <label style="font-size: 36px; font-weight:bold;">Error 7</label>
+                        </div>
+                        <div class="six wide column">
+                            <div class="ui toggle 7 checkbox left padding">
+                                <input type="checkbox" tabindex="0" class="hidden">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden row bottom space" id="error-form-1" >
+                        <div class="ui basic segment" style="padding-left:19px; padding-right: 21px;">
+                            <div class="field">
+                                <label class="medium font" style="padding-bottom:18px;">Enter Info</label>
+                                <input class="medium font" type="text" name="first-name" placeholder="Type...">
+                            </div>
+                            <div class="field">
+                                <label class="medium font" style="padding-bottom:18px; padding-top:18px;">Enter Info</label>
+                                <input class="medium font"type="text" name="last-name" placeholder="Type...">
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
+
             </div>
+
 
         </div>
     </div>

@@ -10,3 +10,8 @@
 .medium.font{
     font-size: 36px!important;
 }
+
+.title.text{
+    font-size: 36px!important;
+    font-weight: bold;
+}

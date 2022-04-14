@@ -1,15 +1,31 @@
 .ui.toggle.checkbox > label::before {
-    width: 7.5rem;
-    height: 3.5rem;
+    width: 9.5rem;
+    height: 5.5rem;
 
 }
 
 .ui.toggle.checkbox > label::after {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 5.5rem;
+    height: 5.5rem ;
     left: -0.5rem;
 }
 
 .ui.toggle.checkbox.checked > label::after {
     left: 4.15rem !important;
+}
+
+.bottom.space{
+    padding-bottom: 60px !important;
+}
+
+.checkbox.left.padding{
+    padding-left: 155px!important;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.unhidden{
+    display: block !important;
 }
