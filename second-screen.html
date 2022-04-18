@@ -21,14 +21,16 @@
     <script type="text/javascript" charset="utf-8" src="js/EnterpriseBrowser/ebapi-modules.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/EnterpriseBrowser/BackwardCompatibility/elements.js"></script>
     <script type="text/javascript" src="js/second-screen.js?v=38"></script>
+    <script type="text/javascript" src= "js/select-error-type.js"></script>
     <link rel="stylesheet" href="css/second-screen.css?v=1">
     <link rel="stylesheet" href="css/topHeader.css">
     <link rel="stylesheet" href="css/shared-styles.css">
+    <link rel="stylesheet" href="css/select-error-type.css">
 </head>
 <body>
     <div class="ui center aligned block header headerHeight">
         <a class="ui massive button leftLabelSpecs" href="first-screen.html"><i class="huge angle left icon"></i></a>
-        <h1 class="ui medium font center aligned header logoHeaderGap"> EE Form v0.39</h1>
+        <h1 class="ui medium font center aligned header logoHeaderGap"> EE Form v0.40</h1>
     </div>
     <div class="ui container topSpace sides fullscreen">
         <form class="ui large form">
@@ -47,17 +49,86 @@
                     </div>
                 </div>
             </div>
-            <div class="field">
-                <div class="field">
-                    <div class="ui massive medium font input">
-                        <input type="text" name="item-#" placeholder="Enter Item #..." />
-                    </div>
-                </div>
-            </div>
-            <h3 class="ui dividing medium font header">Photo</h3>
         </form>
     </div>
+    <div class = "ui form">
+        <div class="ui basic segment">
+            <div class="ui two column relaxed grid" style="margin-left:0px; margin-right:0px;">
+                <div class="row bottom space">
+                    <div class="ten wide column" style="padding-top: 31px;">
+                        <label class="title text">Error Type 1</label>
+                    </div>
+                    <div class="six wide column">
+                        <div class="ui toggle 1 checkbox left padding" >
+                            <input type="checkbox" tabindex="0" class="hidden">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden row bottom space" id="error-form-1" >
+                    <div class="ui basic segment" style="padding-left:19px; padding-right: 21px;">
+                        <div class="field">
+                            <label class="medium font" style="padding-bottom:18px;">Enter Item #</label>
+                            <input class="medium font" type="text" name="item-#" placeholder="Item #...">
+                        </div>
+                        <div class="field">
+                            <label class="medium font" style="padding-bottom:18px; padding-top:18px;">Error Description</label>
+                            <input class="medium font"type="text" name="error-description" placeholder="Type...">
+                        </div>
+                    </div>
+                </div>
+                <div class="row bottom space">
+                    <div class="ten wide column" style="padding-top: 31px;">
+                        <label style="font-size: 36px; font-weight:bold;">Error Type 2</label>
+                    </div>
+                    <div class="six wide column">
+                        <div class="ui toggle 2 checkbox left padding">
+                            <input type="checkbox" tabindex="0" class="hidden">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden row bottom space" id="error-form-2" >
+                    <div class="ui basic segment" style="padding-left:19px; padding-right: 21px;">
+                        <div class="field">
+                            <label class="medium font" style="padding-bottom:18px;">Enter Item #</label>
+                            <input class="medium font" type="text" name="item-#" placeholder="Item #...">
+                        </div>
+                        <div class="field">
+                            <label class="medium font" style="padding-bottom:18px; padding-top:18px;">Error Description</label>
+                            <input class="medium font"type="text" name="description" placeholder="Type...">
+                        </div>
+                    </div>
+                </div>
+                <div class="row bottom space">
+                    <div class="ten wide column" style="padding-top: 31px;">
+                        <label style="font-size: 36px; font-weight:bold;">Error Type 3</label>
+                    </div>
+                    <div class="six wide column">
+                        <div class="ui toggle 3 checkbox left padding">
+                            <input type="checkbox" tabindex="0" class="hidden">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden row bottom space" id="error-form-3" >
+                    <div class="ui basic segment" style="padding-left:19px; padding-right: 21px;">
+                        <div class="field">
+                            <label class="medium font" style="padding-bottom:18px;">Enter Item #</label>
+                            <input class="medium font" type="text" name="item-#" placeholder="Item #...">
+                        </div>
+                        <div class="field">
+                            <label class="medium font" style="padding-bottom:18px; padding-top:18px;">Error Description</label>
+                            <input class="medium font"type="text" name="description" placeholder="Type...">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <h3 class="ui dividing medium font header" style="margin-left: 23px;">Photo</h3>
+    </div>
+
     <div class="ui fluid center aligned basic segment">
+
         <div class="ui center aligned container">
             <button class="ui massive labeled medium font blue icon button" onclick="$secondScreen.enableImageCapture()">
                 <i class="camera icon"></i>
