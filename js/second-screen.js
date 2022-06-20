@@ -27,6 +27,8 @@ $secondScreen = (function(){
 
     function enableImageCapture() {
         console.log('Opening camera!');
+        EB.Camera.desiredHeight= 540;
+        EB.Camera.desiredWidth = 860;
         EB.Camera.takePicture({}, function(imageInfo) {
             console.log('IMAGE TAKEN');
             if (imageInfo) {
